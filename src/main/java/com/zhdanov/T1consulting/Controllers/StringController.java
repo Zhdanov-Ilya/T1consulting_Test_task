@@ -7,7 +7,7 @@ import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/check")
+@RequestMapping("/getcountchars")
 public class StringController {
 
     private final StringService service;
