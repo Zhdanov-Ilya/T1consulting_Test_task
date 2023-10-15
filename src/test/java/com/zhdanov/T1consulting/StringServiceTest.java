@@ -25,7 +25,7 @@ public class StringServiceTest {
         Assertions.assertEquals(testResponse, stringService.getCountChars(testRequest));
     }
 
-    //Òåñò íà ñëó÷àé, åñëè ñòðîêà ñîäåðæèò êàê áóêâû, òàê è öèôðû è ñïåö.ñèìâîëû
+    //Ð¢ÐµÑÑ‚ Ð½Ð° ÑÐ»ÑƒÑ‡Ð°Ð¹, ÐµÑÐ»Ð¸ ÑÑ‚Ñ€Ð¾ÐºÐ° ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ñ‚ ÐºÐ°Ðº Ð±ÑƒÐºÐ²Ñ‹, Ñ‚Ð°Ðº Ð¸ Ñ†Ð¸Ñ„Ñ€Ñ‹ Ð¸ ÑÐ¿ÐµÑ†.ÑÐ¸Ð¼Ð²Ð¾Ð»Ñ‹
     @Test
     public void getCountCharsForStringConsistOfLettersAndDigitsAndSpecialSymbols () {
         String testRequest = "1A2a!B@b#b$C5c c^c7D*d=d+d-d_";
@@ -33,7 +33,7 @@ public class StringServiceTest {
         Assertions.assertEquals(testResponse, stringService.getCountChars(testRequest));
     }
 
-    //Òåñò íà ñëó÷àé, åñëè äëèíà ñòðîêè ïðåâûøàåò 50 ñèìâîëîâ
+    //Ð¢ÐµÑÑ‚ Ð½Ð° ÑÐ»ÑƒÑ‡Ð°Ð¹, ÐµÑÐ»Ð¸ Ð´Ð»Ð¸Ð½Ð° ÑÑ‚Ñ€Ð¾ÐºÐ¸ Ð¿Ñ€ÐµÐ²Ñ‹ÑˆÐ°ÐµÑ‚ 50 ÑÐ¸Ð¼Ð²Ð¾Ð»Ð¾Ð²
     @Test
     public void getCountCharsForStringLengthMoreThan50Test () {
         RuntimeException exception = Assertions.assertThrows(StringLengthMoreThan50Exception.class, () -> {
@@ -42,7 +42,7 @@ public class StringServiceTest {
         });
     }
 
-    //Òåñò íà ñëó÷àé, åñëè ñòðîêà ñîñòîèò òîëüêî èç ñïåö.ñèìâîëîâ
+    //Ð¢ÐµÑÑ‚ Ð½Ð° ÑÐ»ÑƒÑ‡Ð°Ð¹, ÐµÑÐ»Ð¸ ÑÑ‚Ñ€Ð¾ÐºÐ° ÑÐ¾ÑÑ‚Ð¾Ð¸Ñ‚ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð¸Ð· ÑÐ¿ÐµÑ†.ÑÐ¸Ð¼Ð²Ð¾Ð»Ð¾Ð²
     @Test
     public void getCountCharsForStringConsistOfSpecialSymbols () {
         RuntimeException exception = Assertions.assertThrows(IncorrectRequestException.class, () -> {
